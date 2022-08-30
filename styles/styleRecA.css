@@ -1,0 +1,96 @@
+body {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(50px, auto);
+    max-width: 800px;
+    margin: auto;
+    background-image: url("http://news.itu.int/wp-content/uploads/2020/02/e-waste_16x9.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    grid-column: 1/7;
+    grid-row: 1;
+    text-align: center;
+    background-color: yellowgreen;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav {
+    padding-left: 0px;
+    width: 160px;
+    grid-row: 2;
+    vertical-align: top;
+    background-color: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    grid-column: 2/7;
+    grid-row: 2;
+    vertical-align: top;
+    background-color: #333;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    height: fit-content;
+}
+
+article {
+    float: left;
+    height: fit-content;
+    width: fit-content;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    /* border-radius: 1%; */
+    align-content: center;
+}
+
+footer {
+    position: fixed;
+    max-width: 800px;
+    width: 100%;
+    bottom: 0;
+    grid-column: 1/7;
+    grid-row: 3;
+    background-color: yellowgreen;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+    margin-bottom: 0px;
+   
+}
+
+ul.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px 0px;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+li#meteo {
+    color: burlywood;
+    text-align: center;
+}
+
+.active {
+    background-color: #4CAF50;
+}
