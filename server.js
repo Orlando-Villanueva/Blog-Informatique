@@ -4,7 +4,6 @@
 let express = require('express')
 
 const fs = require('fs')
-const port = 8080
 const path = require('path');
 
 let app = express()
@@ -87,7 +86,10 @@ app.get('/icon', (req, res) => {
     console.log(__dirname);
     res.sendFile(path.join(__dirname + '/images/favicon.ico'))
 });
-// connection au port 8080
-app.listen(port, () => {
-    console.log(`Serveur en écoute sur le port ${port}...`)
+// connection au server
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+    console.log(`Serveur en écoute sur le port ${PORT}...`)
+    console.log('Press Ctrl+C to quit.')
 });
